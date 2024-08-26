@@ -14,6 +14,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.clipper.ui.theme.ClipperTheme
@@ -27,7 +28,7 @@ class MainActivity : ComponentActivity() {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
                         name = "there",
-                        modifier = Modifier.padding(innerPadding).background(Color.Cyan)
+                        modifier = Modifier.padding(innerPadding)
                     )
                 }
             }
@@ -41,6 +42,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         Column {
             Text(
                 text = "Hello $name!",
+                fontStyle = FontStyle(2),
                 modifier = modifier
             )
         }
