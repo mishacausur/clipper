@@ -42,6 +42,10 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+
+    fun process(processor: (String) -> Int) {
+        val result = processor("one")
+    }
 }
 
 @Composable
