@@ -41,10 +41,13 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+
+        process { it.length }
     }
 
     fun process(processor: (String) -> Int) {
         val result = processor("one")
+        println("result - $result")
     }
 }
 
